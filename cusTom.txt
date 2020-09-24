@@ -1,0 +1,21 @@
+const MenuLink =( {label, to, activeOnlyWhenExact } )=>{
+
+	return (
+		<Route  path = {to} exact ={activeOnlyWhenExact} children ={( { match } )=>{
+				var active = match ? ' yourClassName  abc' :  ' ';
+				return ( 
+					<li classNmae ={yourClassName}>
+						<Link to={to} className ="your-class"> 
+						     { label } 
+						</Link>
+					 </li>
+				          )
+			}} />								
+                        )
+}
+
+
+// link Router
+<Link  path ="/yourURLhome" label ="trang chu" activeOnlyWhenExact ={true} />     
+<Link  path ="/yourURLcontract" label ="liên hê" activeOnlyWhenExact ={true} />     
+<Link  path ="/yourURLform" label ="form " activeOnlyWhenExact ={true} />     
